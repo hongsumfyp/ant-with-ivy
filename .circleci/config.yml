@@ -1,3 +1,5 @@
+
+
 # Java Maven CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
@@ -5,14 +7,21 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/gradle-scopes
+    working_directory: ~/ant-with-ivy
     
     docker:
       # specify the version you desire here
-      - image: timbru31/java-node 
+      - image: circleci/openjdk:8-jdk-browsers
     
     steps:
     
       - checkout
-      - run: yarn
+      
+      - run: ant run
+
+      - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
+      - run: sudo rm -rf /var/lib/apt/lists/*
+      - run: sudo apt-get update
+      - run: sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
       - run: bash <(curl -s https://copilot.blackducksoftware.com/ci/circle/scripts/upload)
+      - run: bash <(curl -s https://scripts.scantist.com/staging/ci-circle-jar.sh)   
