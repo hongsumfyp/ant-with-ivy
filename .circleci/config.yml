@@ -21,7 +21,7 @@ jobs:
       - run: 
           name: install
           command: |
-            ant -version
+            ant 
             
       - run: 
           name: install dependencies
