@@ -21,7 +21,7 @@ jobs:
       - run: 
           name: install
           command: |
-            ant 
+            ls /home/circleci/.ant/lib
             
       - run: 
           name: install dependencies
