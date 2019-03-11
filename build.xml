@@ -16,9 +16,7 @@
     <!-- =================================
           target: resolve
          ================================= -->
-   <!-- <target name="resolve" description="--> <!--retrieve dependencies with ivy">
-        <ivy:retrieve/>
-    </target>-->
+
 
     <!-- =================================
           target: report
