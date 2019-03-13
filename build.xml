@@ -1,6 +1,6 @@
 <project name="efda-ant-with-ivy-example" default="build" xmlns:ivy="antlib:org.apache.ivy.ant">
     <!-- some variables used -->
-    <property name="lib.dir" value="lib" />
+    <property name="lib.dir" value="/opt/apache-ant/lib" />
     <property name="build.dir" value="target" />
     <property name="src.dir" value="src/main/java/org/continuous_security" />
 
@@ -17,8 +17,8 @@
           target: resolve
          ================================= -->
    <target name="resolve" description="--> retrieve dependencies with ivy">
-        <!--<ivy:retrieve/>-->
-	   <ivy:resolve file="~/ivy.xml" type="jar"/>
+        <ivy:retrieve/>
+	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
 
     <!-- =================================
