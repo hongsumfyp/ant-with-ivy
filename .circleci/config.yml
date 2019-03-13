@@ -21,6 +21,8 @@ jobs:
       - run: 
           name: install
           command: |
+            ls /opt/apache-ant/lib
+            ls /home/circleci/.ant/lib
             ant -lib lib/ -buildfile build.xml
             
             
