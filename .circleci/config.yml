@@ -21,7 +21,7 @@ jobs:
       - run: 
           name: install
           command: |
-             ls /opt/apache-ant/li
+            ls /opt/apache-ant/lib
             ant -lib /opt/apache-ant/lib -buildfile build.xml
             
             
