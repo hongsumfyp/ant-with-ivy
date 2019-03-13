@@ -14,7 +14,8 @@
     </path>
 	
 <target name="bootstrap" description="Used to install the ivy task jar">
-    <get dest="${lib.dir}/ivy.jar" src="http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar"/>
+	<mkdir dir="${build.dir}" />
+    	<get dest="${lib.dir}/ivy.jar" src="http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar"/>
 </target>
     <!-- =================================
           target: resolve
