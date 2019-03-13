@@ -21,7 +21,7 @@ jobs:
       - run: 
           name: install
           command: |
-            ant -lib /lib -buildfile build.xml
+            ant -buildfile build.xml
             
             
       - run: 
