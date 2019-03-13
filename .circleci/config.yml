@@ -15,13 +15,13 @@ jobs:
       - image: circleci/openjdk:8-jdk
     
     steps:
-   # ant -lib lib/ -buildfile build.xml
+  
       - checkout
       
       - run: 
           name: install
           command: |
-            ant -lib /usr/local/bin/ivy -buildfile build.xml
+            ant -lib lib/ -buildfile build.xml
             
             
       - run: 
