@@ -17,7 +17,8 @@
           target: resolve
          ================================= -->
    <target name="resolve" description="--> retrieve dependencies with ivy">
-        <ivy:retrieve/>
+        <!--<ivy:retrieve/>-->
+	   <ivy:resolve file="ivy.xml" conf="default, myconf" />
     </target>
 
     <!-- =================================
