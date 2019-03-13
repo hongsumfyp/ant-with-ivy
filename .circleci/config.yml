@@ -21,7 +21,7 @@ jobs:
       - run: 
           name: install
           command: |
-            ant -lib /usr/local/bin/ivy clean build
+            ant -lib /usr/local/bin/ivy -buildfile build.xml
             
             
       - run: 
