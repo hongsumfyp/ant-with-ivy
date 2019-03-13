@@ -17,7 +17,10 @@ jobs:
     steps:
   
       - checkout
-      
+      - run: 
+          name: install
+          command: |
+            wget /opt/apache-ant/lib http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar
       - run: 
           name: install
           command: |
