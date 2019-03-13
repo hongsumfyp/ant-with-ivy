@@ -1,4 +1,4 @@
-<project name="efda-ant-with-ivy-example" default="build" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project typedef name="efda-ant-with-ivy-example" default="build" xmlns:ivy="antlib:org.apache.ivy.ant">
     <!-- some variables used -->
     <property name="lib.dir" value="lib" />
     <property name="build.dir" value="target" />
