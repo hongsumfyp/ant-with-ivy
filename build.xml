@@ -20,6 +20,11 @@
         <ivy:retrieve/>
 	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
+	
+<target name="bootstrap" description="Used to install the ivy task jar">
+    <mkdir dir="${lib.dir}/.ant/lib"/>
+    <get dest="${lib.dir}/.ant/lib/ivy.jar" src="http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar"/>
+</target>
 
     <!-- =================================
           target: report
