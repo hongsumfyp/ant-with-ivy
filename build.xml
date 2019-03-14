@@ -41,16 +41,12 @@
         <path refid="lib.path.id" />
         <path location="${build.dir}" />
     </path>
-	
-<target name="bootstrap" description="Used to install the ivy task jar">
-	<mkdir dir="${lib.dir}" />
-    	<get dest="${lib.dir}/ivy.jar" src="http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar"/>
-</target>
+
 	
     <!-- =================================
           target: dependencytree
          ================================= -->
-   <target name="dependencytree" description="--> get dependency tree">
+   <target name="dependency-tree" description="--> get dependency tree">
 	   <ivy:dependencytree/>
     </target>
 	
