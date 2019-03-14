@@ -52,9 +52,13 @@
       <fileset dir="${lib.dir}" includes="*.jar"/>
     </path>
   </target>
-    <target name="tree" depends="build" description="--> generates a report of dependencies">
-        <dependencytree />
-    </target>	
+	
+<target name="maven2-namespace-deps-validator" depends="init-ivy" description="-->
+ install module with dependencies from maven2 repo using namespaces">
+<ivy:install settingsRef="advanced.settings" organisation="hibernate"
+ module="hibernate-validator" revision="5.2.2.Final" from="${from.resolver}"
+ to="${to.resolver}" transitive="true"/>
+</target>
     <!-- =================================
           target: resolve
          ================================= -->
