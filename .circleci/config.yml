@@ -22,7 +22,6 @@ jobs:
           command: |
             ant init-ivy
             ant resolve
-            ant dependency:tree
 
 
       - run: 
