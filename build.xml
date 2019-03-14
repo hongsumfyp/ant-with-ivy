@@ -46,11 +46,18 @@
 	<mkdir dir="${lib.dir}" />
     	<get dest="${lib.dir}/ivy.jar" src="http://search.maven.org/remotecontent?filepath=org/apache/ivy/ivy/2.2.0/ivy-2.2.0.jar"/>
 </target>
+	
+    <!-- =================================
+          target: dependencytree
+         ================================= -->
+   <target name="dependencytree" description="--> get dependency tree">
+	   <ivy:dependencytree/>
+    </target>
+	
     <!-- =================================
           target: resolve
          ================================= -->
    <target name="resolve" description="--> retrieve dependencies with ivy">
-	   <ivy:dependencytree/>
         <ivy:retrieve/>
 	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
