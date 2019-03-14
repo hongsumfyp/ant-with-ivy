@@ -49,9 +49,12 @@
   <target name="get-deps" description="o Retrieve dependencies" depends="init-ivy" unless="noget">
     <ivy:retrieve pattern="$${lib.dir}/[artifact]-[revision].[ext]" sync="true" type="jar"/>
     <path id="project.classpath">
-      <fileset dir="${libdir}" includes="*.jar"/>
+      <fileset dir="${lib.dir}" includes="*.jar"/>
     </path>
   </target>
+ <artifact:dependencies cacheDependencyRefs="true">
+      <pom file="mypom.xml"/>
+    </artifact:dependencies>
 	
     <!-- =================================
           target: resolve
