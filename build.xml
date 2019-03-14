@@ -47,7 +47,7 @@
           target: dependencytree
          ================================= -->
    <target name="dependency-tree" description="--> get dependency tree">
-	   <ivy:cachepath organisation="org.myorg" module="jar name" revision="jar version number" pathid="lib.path.id"  inline="true">
+	   <ivy:cachepath organisation="org.myorg" module="jar name" revision="jar version number" pathid="lib.path.id"  inline="true" />
     </target>
 	
     <!-- =================================
