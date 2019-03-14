@@ -21,7 +21,8 @@ jobs:
           name: install
           command: |
             ls /opt/apache-ant/lib
-            ant -lib /opt/apache-ant/lib -buildfile build.xml
+            ant init-ivy
+            ant resolve
             
             
       - run: 
