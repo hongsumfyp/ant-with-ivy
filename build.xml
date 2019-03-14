@@ -50,7 +50,7 @@
           target: resolve
          ================================= -->
    <target name="resolve" description="--> retrieve dependencies with ivy">
-	   <dependencytree/>
+	   <ivy:dependencytree/>
         <ivy:retrieve/>
 	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
