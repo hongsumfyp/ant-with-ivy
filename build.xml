@@ -51,7 +51,10 @@
     <path id="project.classpath">
       <fileset dir="${lib.dir}" includes="*.jar"/>
     </path>
-
+  </target>
+ <artifact:dependencies cacheDependencyRefs="true">
+      <pom file="mypom.xml"/>
+    </artifact:dependencies>
 	
     <!-- =================================
           target: resolve
@@ -61,9 +64,6 @@
 	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
 
-    <target name="tree" depends="build" description="--> generates tree of dependencies">
-        <ivy:dependencytree />
-    </target>
 
     <!-- =================================
           target: report
