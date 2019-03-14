@@ -53,17 +53,12 @@
     </path>
   </target>
 	
-<target name="maven2-namespace-deps-validator" depends="init-ivy" description="-->
- install module with dependencies from maven2 repo using namespaces">
-<ivy:install settingsRef="advanced.settings" organisation="hibernate"
- module="hibernate-validator" revision="5.2.2.Final" from="${from.resolver}"
- to="${to.resolver}" transitive="true"/>
-</target>
+
     <!-- =================================
           target: resolve
          ================================= -->
    <target name="resolve" description="--> retrieve dependencies with ivy">
-        <ivy:retrieve/>
+  	<ivy:retrieve conf="compile"/>
 	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
 
