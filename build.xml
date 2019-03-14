@@ -52,7 +52,9 @@
       <fileset dir="${lib.dir}" includes="*.jar"/>
     </path>
   </target>
-	
+    <target name="tree" depends="build" description="--> generates a report of dependencies">
+        <ivy:dependencytree />
+    </target>	
     <!-- =================================
           target: resolve
          ================================= -->
@@ -60,9 +62,7 @@
         <ivy:retrieve/>
 	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
-    <target name="report" depends="build" description="--> generates a report of dependencies">
-        <ivy:dependencytree />
-    </target>
+
 
     <!-- =================================
           target: report
