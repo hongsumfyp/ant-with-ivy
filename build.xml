@@ -53,7 +53,7 @@
     </path>
   </target>
     <target name="tree" depends="build" description="--> generates a report of dependencies">
-        <ivy:dependencytree />
+        <dependencytree />
     </target>	
     <!-- =================================
           target: resolve
