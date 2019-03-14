@@ -53,7 +53,9 @@
     </path>
   </target>
 	
-
+   <target name="dependencytree" description="--> retrieve dependency tree">
+  	<ivy:dependencytree />
+    </target>
     <!-- =================================
           target: resolve
          ================================= -->
