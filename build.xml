@@ -53,9 +53,6 @@
     </path>
   </target>
 	
-   <target name="dependencytree" depends="resolve" description="--> retrieve dependency tree">
-  	<ivy:dependencytree />
-    </target>
     <!-- =================================
           target: resolve
          ================================= -->
@@ -63,7 +60,9 @@
   	<ivy:retrieve/>
 	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
-
+   <target name="dependencytree"  description="--> retrieve dependency tree">
+  	<ivy:dependencytree />
+    </target>
 
     <!-- =================================
           target: report
