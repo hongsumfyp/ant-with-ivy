@@ -20,9 +20,9 @@ jobs:
       - run: 
           name: install
           command: |
-            ls /opt/apache-ant/lib
             ant init-ivy
             ant resolve
+            ant dependency:tree
 
 
       - run: 
