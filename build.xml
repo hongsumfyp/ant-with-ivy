@@ -61,7 +61,7 @@
 	   <!--<ivy:resolve file="~/ivy.xml" type="jar"/>-->
     </target>
 
-    <target name="tree" depends="clean-cache" description="--> generates tree of dependencies">
+    <target name="tree" depends="build" description="--> generates tree of dependencies">
         <ivy:dependencytree />
     </target>
 
