@@ -22,7 +22,7 @@ jobs:
           command: |
             ant init-ivy
             ant resolve
-            ant -buildfile build.xml
+
 
       - run: 
           name: install dependencies
